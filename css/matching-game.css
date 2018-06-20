@@ -1,0 +1,142 @@
+@charset = "UTF-8";
+
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    overflow: scroll;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    background-color: #EEE;
+    width: 1325x; /* relative to body */
+    margin: 0px auto; /* center container within body */
+/*    border: 1px solid #AAA;*/
+    border-radius: 5px;
+    height: 100vh;
+    text-align: center;
+    padding: 10px; /* keep child elements from hitting edge of container */
+}
+
+table {
+    background-color: white;
+    width: 100%;
+    border-radius: 25px;
+    /* border: 3px solid forestgreen; */
+}
+
+th {
+    background-color: forestgreen;
+    color: bisque;
+}
+
+img {
+    width: 99px;
+    height: auto;
+}
+
+.pics {
+    background-color: #FFF;
+    width: 75px; /* relative to body */
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+/*  add box shadow once images are added in javascript   box-shadow: */
+}
+
+.pics:hover {
+    background-color: #EFE;
+}
+    
+#app {
+    background-color: white;
+    width: 95%; /* relative to body */
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    min-height: 70vh;
+}
+
+header {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 5px auto;
+    text-align: center;
+    color: #455;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+
+footer {
+/*    float:left;*/
+    color: #455;
+    margin-top: 25px;
+/*    padding: 50px 200px;*/
+    letter-spacing: 3px;
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px;
+}
+
+button {
+    font-size: 1.25rem;
+    color: whitesmoke;
+    background-color: #576;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+button:hover {
+    background-color: #798;
+}
+
+#timer-box {
+    font-size: 1.25rem;
+    color: red;
+    margin: 0 5px;
+}
+
+#outputMsg {
+    width: 400px;
+    height: 50px;
+    margin-left: 80px;
+/*    background-color: whitesmoke;*/
+    display: inline-block;
+}
+#highScore {
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    height: 450px;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: bold;
+    overflow-y: scroll;
+    top: 1000px; /* push it off screen til needed to display high score*/
+    left: 400px;
+    background-color: teal;
+    border: 5px solid magenta;
+    box-shadow: 10px 10px 10px magenta;
+    border-radius: 15px;
+    z-index: 3;
+    display: none;
+}

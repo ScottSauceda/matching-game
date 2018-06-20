@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <title>Matching Game</title>
+        
+        <link href="css/matching-game.css" rel="stylesheet"> 
+        
+    </head>
+    
+    <body>
+        
+       <div id="container">
+        
+           <header>
+            
+               <h1>Memory Game</h1>
+               
+               <select id="chooser" style="font-size: 1.25rem; padding: 10px 10px; margin: 0 0 0 35px;">
+                 <option value="12">Choose Difficulty</option>
+                   
+                 <option value="12">Novice(12 Pairs)</option>
+                   
+                 <option value="18">Expert(18 Pairs)</option>
+                   
+                 <option value="24">Professional(24 Pairs)</option>
+                 
+                   <option value="30">Ninja(30 Pairs)</option>
+               
+               </select>
+               
+               <button id="play-btn">PLAY</button>
+               
+               <div id="outputMsg"></div>
+                              
+           </header>
+           
+           <div id="app"></div><!-- holds match game pieces -->
+           
+           <footer>
+            <span id="score-box">
+               Attempts: &nbsp;  0  &nbsp; 
+               Matches: &nbsp;  0  &nbsp;
+               Average: &nbsp;  0  &nbsp; 
+               
+              </span>
+              <span id="timer-box">
+                Time: &nbsp;  00:00  &nbsp;
+              </span>
+               
+           </footer>
+           
+       </div><!-- close container -->
+        
+        <!-- high score box -->
+        <div id="highScore"></div> <!-- holds high score box -->
+        
+       <script src="js/Classes/MemoryGame.js"></script>
+        
+        <script>
+            
+            const picsArr = [ "anchor", "apple", "barn", "baseball", "basketball-player", "boxer", "car", "cat", "cowboy-boot", "duck", "eagle", "golden-anchor", "grapes", "horse", "house", "jumping-horse", "jumping", "key", "keys", "lion", "monster-truck", "motorcycle", "pocket-watch", "scissors", "seahorse", "shoe", "stopwatch", "wagon-wheel", "wheel", "slamdunk" ];
+        
+            const memorygame = new MemoryGame("app", picsArr);
+            
+            
+        </script>
+        
+ </body>
+    
+</html>
