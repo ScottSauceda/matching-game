@@ -12,8 +12,10 @@
     $mbrID = 1; // hard-coded, pending login functionality
 
     // connect to db
-    $conn = mysqli_connect('localhost', 'root', 'mysql');
-    mysqli_select_db($conn, "matchgame");
+    include 'db-config.php';
+
+    $conn = mysqli_connect('localhost', $db_user, $db_pass);
+    mysqli_select_db($conn, $db_name);
 
     //C for CRUD: Create a new record into db
     $query = "INSERT INTO scores (mbrID, attempts, matches, average, seconds, score) VALUES($mbrID, '$attempts', '$matches', '$average', '$seconds', '$score')";
